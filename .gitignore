@@ -1,0 +1,12 @@
+# Logs
+logs
+*.log
+
+.idea
+.DS_Store
+Thumbs.db
+
+/test/dist
+/node_modules
+/bower_components
+/vendor

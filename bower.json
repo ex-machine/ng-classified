@@ -1,0 +1,44 @@
+{
+  "name": "ng-classified",
+  "authors": [
+    "ex-machine"
+  ],
+  "description": "Compels AngularJS to be friendly to ES6/ES2015 classes",
+  "keywords": [
+    "angular",
+    "es6",
+    "es7",
+    "class",
+    "classes"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/ex-machine/ng-classified",
+  "moduleType": [
+    "amd",
+    "es6",
+    "globals",
+    "node"
+  ],
+  "main": "dist/ng-classified.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.0"
+  },
+  "devDependencies": {
+    "angular-1.2": "angular#~1.2.0",
+    "angular-1.3": "angular#~1.3.0",
+    "angular-1.4": "angular#~1.4.0",
+    "angular-mocks-1.2": "angular-mocks#~1.2.0",
+    "angular-mocks-1.3": "angular-mocks#~1.3.0",
+    "angular-mocks-1.4": "angular-mocks#~1.4.0"
+  },
+  "resolutions": {
+    "angular": "1.4.7"
+  }
+}
