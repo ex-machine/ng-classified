@@ -147,7 +147,7 @@ export class JoeDirective {
 }
 ```
 
-See also [specs](tree/master/test) for more details on the use.
+See also [specs](https://github.com/ex-machine/ng-classified/tree/master/test) for more details on the use.
 
 ## Compatibility
 
