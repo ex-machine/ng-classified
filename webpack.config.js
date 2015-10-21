@@ -46,19 +46,6 @@ module.exports = {
 	},
 	externals: {},
 	plugins: [
-		// new webpack.$.uglifyJs({
-		// 	exclude: /native/i,
-		// 	comments : / ^/,
-		// 				// reserved: 'appConstant',
-
-		// output: { reserved: {
-		// 	vars: ['appConstant', 'appAnotherConstant']
-		// } },
-		// 	compress: {
-		// 		warnings: false,
-		// 		screw_ie8 : false,
-		// 	}
-		// }),
 		new webpack.$.limitChunkCount({
 			maxChunks: 1
 		})
