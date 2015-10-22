@@ -3,8 +3,6 @@
 
 'use strict';
 
-let dump = angular.mock.dump;
-let inject = angular.mock.inject;
 let module = angular.mock.module;
 
 let typeErrorRegex = /modulerr[\s\S]+?class/i;

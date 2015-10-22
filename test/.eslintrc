@@ -19,6 +19,7 @@
 		"module": false,
 		"angular": false,
 		"require": false,
-		"inject": false
+		"inject": false,
+		"dump": false
 	}
 }
