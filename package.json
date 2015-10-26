@@ -50,7 +50,7 @@
   },
   "dependencies": {},
   "peerDependencies": {
-    "angular": "^1.0"
+    "angular": "^1.0 >=1.5.0-beta.0"
   },
   "//": [
     "npm run version -- 1.0.0"
