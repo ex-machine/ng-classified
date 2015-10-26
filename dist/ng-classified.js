@@ -85,6 +85,7 @@ function injectorInjectInvokers(injector) {
 		var nativeClassRegex = /^class/;
 		var classRegex = /class/i;
 
+		var invokeResult;
 		var fn = args[0];
 		var skipClassify = !angular.isFunction(fn) || fn.hasOwnProperty('$$classified');
 
@@ -93,7 +94,8 @@ function injectorInjectInvokers(injector) {
 				classifyInvokee(args);
 			} else if (this.$classify || (this.$classify !== false && classRegex.test(fn.toString()))) {
 				try {
-					return apply(injector, invoke_, args);
+					invokeResult = apply(injector, invoke_, args);
+					fn.$$classified = false;
 				} catch (e) {
 					if (e instanceof TypeError && classRegex.test(e.message)) {
 						classifyInvokee(args);
@@ -104,7 +106,7 @@ function injectorInjectInvokers(injector) {
 			}	
 		}
 
-		return apply(injector, invoke_, args);
+		return invokeResult || apply(injector, invoke_, args);
 	}
 
 	function classifyInvokee(args) {
