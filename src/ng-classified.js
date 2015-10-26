@@ -1,6 +1,6 @@
 'use strict';
 
-var apply = require('./apply');
+var apply = require('apply-fn');
 
 var ngClassified = angular.module('ngClassified', [])
 .config(['$injector', function ($injector) {

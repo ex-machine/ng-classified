@@ -23,8 +23,9 @@ let packageName = 'ng-classified';
 gulp.task('clean', (cb) => del(['./dist/*'], cb));
 
 gulp.task('build', () => {
-	return gulp.src(['src/**.js'])
+	return gulp.src(['src/**/*.js'])
 	.pipe(gulp.$.small(packageName + '.js', {
+		externalResolve: ['node_modules'],
 		globalModules: {
 			angular: {
 				universal: 'angular'
