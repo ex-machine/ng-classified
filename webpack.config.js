@@ -7,11 +7,6 @@ let path = require('path');
 
 let webpack = require('webpack');
 
-webpack.$ = {
-	limitChunkCount: webpack.optimize.LimitChunkCountPlugin,
-	uglifyJs: webpack.optimize.UglifyJsPlugin
-};
-
 module.exports = {
 	cache: true,
 	entry: {
@@ -44,10 +39,5 @@ module.exports = {
 			}
 		],
 	},
-	externals: {},
-	plugins: [
-		new webpack.$.limitChunkCount({
-			maxChunks: 1
-		})
-	]
+	externals: {}
 };
