@@ -2,9 +2,8 @@
 var exports = {};
 'use strict';
 
+var angular = __small$_mod_0;
 var apply = ((function() {
-var exports = {};
-exports = ((function() {
 var exports = {};
 function apply(self, fn, args) {
 	var selfless = (self === undefined) || (self === null);
@@ -31,11 +30,9 @@ function apply(self, fn, args) {
 		default:
 			return selfless ? fn.apply(null, args) : fn.apply(self, args);
 	}
-};
+}
 
 exports = apply;
-return exports;
-})());
 return exports;
 })());
 

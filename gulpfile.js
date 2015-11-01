@@ -44,6 +44,7 @@ gulp.task('build', () => {
 
 gulp.task('minify', () => {
 	return gulp.src(['dist/**.js'])
+	.pipe(gulp.$.sourcemaps.init())
 	.pipe(gulp.$.uglify({
 		compress : {
 			screw_ie8 : false
@@ -52,7 +53,8 @@ gulp.task('minify', () => {
 	.pipe(gulp.$.rename({
 		suffix: '.min'
 	}))
-	.pipe(gulp.$.debug('minify'))
+	.pipe(gulp.$.sourcemaps.write('.'))
+	.pipe(gulp.$.debug({ title: 'minify:' }))
 	.pipe(gulp.dest('dist'));
 });
 
