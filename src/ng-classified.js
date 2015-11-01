@@ -1,5 +1,6 @@
 'use strict';
 
+var angular = require('angular');
 var apply = require('apply-fn');
 
 var ngClassified = angular.module('ngClassified', [])
