@@ -60,7 +60,6 @@
   ],
   "scripts": {
     "version": "mversion -n -m %s",
-    "postinstall": "bower cache clean && bower install",
     "test": "gulp test"
   }
 }
