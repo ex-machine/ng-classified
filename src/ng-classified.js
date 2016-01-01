@@ -77,13 +77,14 @@ function injectorInjectInvokers(injector) {
 		var fn_ = args[0]; 
 
 		var fn = args[0] = function () {
-			var fnArgsLength = arguments.length;
+			var fnArgsLength = arguments.length + 1;
 			var fnArgs = new Array(fnArgsLength);
-			for (var i = 0; i < fnArgsLength; i++) {
-				fnArgs[i] = arguments[i];
+			for (var i = 1; i < fnArgsLength; i++) {
+				fnArgs[i] = arguments[i - 1];
 			}
 
-			return new (apply(fn_, Function.prototype.bind, [null].concat(fnArgs)));
+			// fnArgs[0] === undefined 
+			return new (apply(fn_, Function.prototype.bind, fnArgs));
 		};
 
 		injector.annotate(fn_);
