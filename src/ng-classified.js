@@ -83,7 +83,7 @@ function injectorInjectInvokers(injector) {
 				fnArgs[i] = arguments[i];
 			}
 
-			return new (Function.prototype.bind.apply(fn_, [null].concat(fnArgs)));
+			return new (apply(fn_, Function.prototype.bind, [null].concat(fnArgs)));
 		};
 
 		injector.annotate(fn_);
