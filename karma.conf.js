@@ -16,6 +16,7 @@ module.exports = (karmaConfig) => {
 		logLevel: karmaConfig.LOG_INFO,
 		autoWatch: false,
 		singleRun: true,
+		concurrency: 1,
 		browsers: ['Chrome'],
 		customLaunchers: {
 			Chrome_Travis_CI: {
