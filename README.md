@@ -2,7 +2,7 @@
 
 Compels AngularJS to be friendly to ES6/ES2015 classes. It will be sweet to these fellows from now on.
 
-[![Build Status](https://travis-ci.org/ex-machine/ng-classified.svg?branch=master)](https://travis-ci.org/ex-machine/ng-classified)
+[![Build Status](https://travis-ci.org/ex-machine/ng-classified.png?branch=master)](https://travis-ci.org/ex-machine/ng-classified)
 
 ## Description
 
