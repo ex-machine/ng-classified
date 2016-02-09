@@ -13,6 +13,7 @@ module.exports = (karmaConfig) => {
 		port: 9876,
 		captureTimeout: 20000,
 		browserNoActivityTimeout: 30000,
+		browserDisconnectTolerance: 1,
 		colors: true,
 		logLevel: karmaConfig.LOG_INFO,
 		autoWatch: false,
