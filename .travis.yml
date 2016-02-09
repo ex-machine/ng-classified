@@ -6,10 +6,11 @@ node_js:
 before_install:
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
-  - export CHROME_BIN=/usr/bin/google-chrome
+  - sudo add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) main universe restricted multiverse"
   - sudo apt-get install -y libappindicator1
   - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
   - sudo dpkg -i google-chrome*.deb
+  - export CHROME_BIN=/usr/bin/google-chrome
   - npm up -g npm
   - npm --version
   - npm i -g gulp karma
