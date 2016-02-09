@@ -12,6 +12,7 @@ module.exports = (karmaConfig) => {
 		reporters: ['spec'],
 		port: 9876,
 		captureTimeout: 20000,
+		browserNoActivityTimeout: 30000,
 		colors: true,
 		logLevel: karmaConfig.LOG_INFO,
 		autoWatch: false,
