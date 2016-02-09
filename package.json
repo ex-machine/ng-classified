@@ -60,6 +60,6 @@
   ],
   "scripts": {
     "version": "mversion -n -m %s",
-    "test": "gulp test"
+    "test": "gulp test-native"
   }
 }

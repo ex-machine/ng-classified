@@ -96,6 +96,14 @@ gulp.task('test-babel', (cb) => {
 	cb);
 });
 
+gulp.task('test-native', (cb) => {
+	gulp.$.runSequence(
+		'test-clean',
+		'test-build',
+		'unit:native',
+	cb);
+});
+
 gulp.task('unit', ['unit:babel', 'unit:native']);
 gulp.task('unit:babel', ['unit:babel-maxified', 'unit:babel-minified']);
 
