@@ -7,9 +7,9 @@ before_install:
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
   - export CHROME_BIN=/usr/bin/google-chrome
-  - wget http://security.ubuntu.com/ubuntu/pool/main/liba/libappindicator/libappindicator1_12.10.1+15.04.20141110-0ubuntu1_amd64.deb
+  - sudo apt-get install -y libappindicator1
   - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-  - sudo dpkg -i *.deb
+  - sudo dpkg -i google-chrome*.deb
   - npm up -g npm
   - npm --version
   - npm i -g gulp karma
